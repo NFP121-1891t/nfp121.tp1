@@ -24,6 +24,15 @@ package question3;
  *          engagements, et suivi d'un appel à tearDown(), qui les détruit.
  */
 public class AuditeurCNAMTest extends junit.framework.TestCase {
+    private question3.AuditeurCNAM auditeur1;
+    private java.lang.String a2;
+    private question3.AuditeurCNAM auditeur2;
+    private java.lang.String A2;
+  
+
+    
+    
+
     // Définissez ici les variables d'instance nécessaires à vos engagements;
     // Vous pouvez également les saisir automatiquement du présentoir
     // à l'aide du menu contextuel "Présentoir --> Engagements".
@@ -43,7 +52,14 @@ public class AuditeurCNAMTest extends junit.framework.TestCase {
      */
     protected void setUp() // throws java.lang.Exception
     {
-        // Initialisez ici vos engagements
+        auditeur1 = new question3.AuditeurCNAM("shazaElali", "e", "1891t");
+        a2 = auditeur1.toString();
+        auditeur2 = new question3.AuditeurCNAM("ZAYNAB", "r", "1988g");
+        auditeur2.matricule();
+        A2 = auditeur2.toString();
+        auditeur2 = new question3.AuditeurCNAM("ZAYNAB", "r", "1988g");
+        auditeur2.matricule();
+        A2 = auditeur2.toString();
     }
 
     /**

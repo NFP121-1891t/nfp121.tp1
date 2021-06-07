@@ -3,6 +3,8 @@ package question2;
 import question1.Circle;
 import question1.Square;
 import question1.Triangle;
+import java.awt.*;
+import java.awt.event.*;
 
 /**
  * This class represents a simple picture. You can draw the picture using the
@@ -20,6 +22,8 @@ public class Picture {
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Circle SecondSun;
+    private int yPosition;
 
     /**
      * Constructor for objects of class Picture
@@ -55,7 +59,24 @@ public class Picture {
         sun.moveVertical(-10);
         sun.changeSize(60);
         sun.makeVisible();
+        
+        
+        SecondSun = new Circle();
+        SecondSun.changeColor("blue");
+        SecondSun.moveHorizontal(190);
+        SecondSun.moveVertical(-10);
+        SecondSun.changeSize(60);
+        
+        SecondSun.makeVisible();
+      
+         sunSet(SecondSun);
+   
+         
     }
+     public void sunSet(Circle sun){
+        
+          sun.slowMoveVertical(250);
+        }
 
     /**
      * Change this picture to black/white display
@@ -82,5 +103,7 @@ public class Picture {
             sun.changeColor("yellow");
         }
     }
+    
+    
 
 }
